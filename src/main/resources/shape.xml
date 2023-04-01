@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+<bean id="rectangle" class="entity.Rectangle">
+        <constructor-arg value="5" />
+        <constructor-arg value="10" />
+    </bean>
+
+    <bean id="triangle" class="entity.Triangle">
+        <constructor-arg value="3" />
+        <constructor-arg value="4" />
+        <constructor-arg value="5" />
+    </bean>
+
+    <bean id="circle" class="entity.Circle">
+        <constructor-arg value="5" />
+    </bean>
+
+    <bean id="squareTrapezoid" class="entity.SquareTrapezoid">
+        <constructor-arg ref="rectangle" />
+        <constructor-arg ref="triangle" />
+    </bean>
+
+</beans>
+
